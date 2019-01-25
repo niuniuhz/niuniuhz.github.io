@@ -1,79 +1,68 @@
-<!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
-    <meta name="format-detection" content="telephone=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link type="text/css" rel="stylesheet" href="./rest.css">
-    <link type="text/css" rel="stylesheet" href="./com.css">
-    <title>牛牛回租</title>
-<body style="">
+<!doctype html>
+<html>
 
-<!--导航-->
-<div class="width">
-    <div class="nav width12">
-        <img class="nav-logo" src="./logo_01.png">
-        <!--<a class="phone db f16 col-ffc r" href="javascript:;"><img src="/static/appcms/dhs/icon_01.png">400-112-5775</a>-->
-    </div>
-</div>
+<head>
+    <meta charset="utf-8">
+    <!--    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />-->
+    <meta name="renderer" content="webkit|ie-stand" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>秒放宝</title>
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/index.css">
+    <!--[if lte IE 8]>
+	<style type="text/css">
+		html,body{width:100%; height:100%; overflow:scroll}
+		.section-btn{display:none;}
+	</style>
+	<![endif]-->
+</head>
 
-<div class="width bgc-f6">
-    <div class="conwidth padbtm-100">
-        <div class="tit f30 col-3 tc"><span>牛牛回租产品简介<b></b></span></div>
-        <p class="f24 col-6 lh50 tg-twoword tj">牛牛回租：专业的闲置二手手机变现平台，一键估价，审核快，价格高，让您轻松周转生活！</p>
-    </div>
-</div>
-
-<!--产品特色-->
-<div class="width bgc-f6 fix">
-    <div class="width12">
-        <div class="tit f30 col-3 tc"><span>产品特色<b></b></span></div>
-        <div class="feature pr">
-            <img class="db width" src="./bg_01.png">
-            <div class="txt txt1">
-                <h4 class="f32 col-3 marbtm-6">立马估价</h4>
-                <p class="f24 col-6 lh40">快速评估手机价值快速下单</p>
-            </div>
-            <div class="txt txt2">
-                <h4 class="f32 col-3 marbtm-6">快速审核</h4>
-                <p class="f24 col-6 lh40">24h全自动审核，无需等待，提交申请即刻审核</p>
-            </div>
-            <div class="txt txt3">
-                <h4 class="f32 col-3 marbtm-6">极速到账</h4>
-                <p class="f24 col-6 lh40">评估审核通过后即付款，流程安全透明，到账仅需3分钟</p>
-            </div>
+<body>
+    <div class="container">
+        <header>
+            <p> <span id="5">联系我们</span><span id="4">贷款流程</span><span id="3">产品介绍</span><span id="2">公司简介</span><span id="1" class="onClick">首页</span> </p>
+        </header>
+        <div class="banner section1">
+            <p>秒放宝-app精品推荐
+                <br><span>极速下款 、门槛低、速度快、额度灵活、利息低</span></p>
         </div>
-    </div>
-</div>
-
-
-<!--底部备案-->
-<div class="width bgc-3b">
-    <div class="btm tc">
-        <div class="contact f20 col-86 lh34 tj">
-            <h4 class="f24 colf marbtm">联系我们</h4>
-            <p>邮箱：linhuanke@chenlongwangluo.com</p>
-            <p>客服电话：020-38331082</p>
-            <p>© 2018 广州宸隆网络科技有限公司</p>
+        <div class="contant">
+            <section class="section2">
+                <h3></h3>
+                <div>秒放宝-app精品推荐
+                    <br>致力于为有借款服务需求的用户提供基于互联网大数据风控的便捷高效的信用借款服。 
+                    <br>用户可在线上移动端轻松完成信用评估、借款分期等操作。 
+                    <br>我们为都市白领搭建了一个安全、透明的互联网信用服务平台。</div>
+            </section>
+            <section class="section3">
+                <h3></h3>
+                <div></div>
+            </section>
+            <section class="section4">
+                <h3></h3>
+                <div></div>
+            </section>
+            <section class="section5">
+                <h3></h3>
+                <div>
+                    <p>mfb@fbz123.com&nbsp;服务时间：9:00-18:00</p>
+                    
+                </div>
+            </section>
         </div>
+        <footer>Copyright 2018 Shanghai Fanbeizhuan Financial Information Service Co.,Ltd.</footer>
     </div>
-</div>
-
-<script src="./jquery.js"></script>
-<script>
-    $(function(){
-        $(".btn-one").hover(function(){
-            $(".weport-one").show();
-        },function(){
-            $(".weport-one").hide();
-        })
-
-        $(".btn-two").hover(function(){
-            $(".weport-two").show();
-        },function(){
-            $(".weport-two").hide();
-        })
-    })
-</script>
-
-</body></html>
+    <script src="/jquery.js"></script>
+    <script>
+        $('header span').on('click', function() {
+            var id = $(this).attr('id');
+            $(this).addClass('onClick').siblings('span').removeClass('onClick');
+            $('#section' + id).scrollTop();
+            var scrollNum = $('.section' + id).offset().top - 100;
+            $("html,body").animate({
+                scrollTop: scrollNum
+            }, 500);
+        });
+    </script>
+</body>
+</html>
